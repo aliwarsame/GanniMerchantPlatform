@@ -1,4 +1,4 @@
-<project name="JavaEE Build" default="BuildAll">
+<project name="GanniMerchantPlatform" default="BuildAll">
     			
 	<property name="glassfish_libs" value="/Users/aliwarsame/GlassFish_Server/glassfish/modules"/>
 	
