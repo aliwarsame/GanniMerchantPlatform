@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      
+      
+      <h:body>
+      
+      		<h1>Merchant Detail for #{allMerchantsPageBean.selectedMerchant.firstName}</h1>
+      		<h:form>     
+      		   <input type="hidden" name="merchantId" value="#{allMerchantsPageBean.selectedMerchant.id}"/>  		   
+      		   <h:commandLink action="#{allMerchantsPageBean.showAllMerchantOffers}">     		   
+      		      #{allMerchantsPageBean.selectedMerchant.id}
+      		   </h:commandLink>      		         		   
+      		</h:form> 
+      		<p>Name:  #{allMerchantsPageBean.selectedMerchant.firstName}  #{allMerchantsPageBean.selectedMerchant.surname}</p>
+			<p>Jobrole:  #{allMerchantsPageBean.selectedMerchant.jobRole}</p>
+			<p>Salary:  $#{allMerchantsPageBean.selectedMerchant.salary}</p>
+          <h:form>
+      	   <input type="hidden" name="merchantId" value="#{allMerchantsPageBean.selectedMerchant.id}"/>
+      	   <h:commandButton value="Submit Details" action="#{allMerchantsPageBean.showAllMerchantOffers}"/>
+        </h:form> 
+      </h:body>
+      
+</html>      

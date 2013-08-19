@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+      <h:head>
+      	<title>Enter New Offer Details</title>
+      </h:head>
+      
+      <h:body>
+      
+        <h1>Enter new offer detail:</h1>
+      
+      	<h:form>
+      	   <p><label>First Name</label><h:inputText value="#{enterOffer.text}"/></p>
+      	   <input type="hidden" name="merchantId" value="#{allMerchantsPageBean.selectedMerchant.id}"/>
+      	   <h:commandButton value="Submit Details" action="#{enterOffer.createOffer}"/>
+        </h:form>      	               
+      </h:body>
+      
+</html>      

@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+      
+      <h:head>
+      	<title>All Merchant Offers</title>
+      </h:head>
+      
+      <h:body>
+      	<h1>All Merchant Offers</h1>
+      	
+      	<h:form>
+      	
+      	<p:dataTable value="#{allMerchantsPageBean.allMerchantOffers}"
+      	             var="offer"
+      	             binding="#{allMerchantsPageBean.dataTable}">      	
+      		
+      		<p:column>
+      		   <f:facet name="header">ID</f:facet>
+      		   <f:facet name="footer">ID</f:facet>       		   
+      		   <h:commandLink action="#{allMerchantsPageBean.createMerchantOffer}">     		   
+      		      #{offer.id}
+      		   </h:commandLink>      		         		   
+      		</p:column>
+      		
+      		<p:column>
+      		   <f:facet name="header">Name</f:facet>
+      		   <f:facet name="footer">Name</f:facet>       		   
+      		   <h:commandLink action="#{allMerchantsPageBean.showMerchantOffers}">     		   
+      		      #{offer.text}
+      		   </h:commandLink>      		         		   
+      		</p:column>
+      		    	
+      	</p:dataTable>
+      	
+      	</h:form>
+      	
+      	      		
+      </h:body>          
+</html>      
